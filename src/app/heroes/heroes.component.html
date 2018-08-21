@@ -1,0 +1,7 @@
+<div>
+  <h2>List of heroes</h2>
+  <ul *ngFor="let hero of heroes;index as i" (click)="selectHero(hero)">
+    <li [class.selected]="hero === selectedHero">{{i + 1}} - {{hero.name | uppercase}}</li>
+  </ul>
+</div>
+<app-hero-details [hero]="selectedHero"></app-hero-details>
